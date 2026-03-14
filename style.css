@@ -1,0 +1,470 @@
+/* ===== ЗАГАЛЬНІ СТИЛІ ===== */
+
+body {
+    font-family: sans-serif;
+    background-color: #ffffff;
+}
+
+/* ===== ХЕДЕР ===== */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    margin-bottom: 0px;
+    background-color: #d6d6d6;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #000000;
+    letter-spacing: 2px;
+}
+
+.button {
+    background-color: #ffffff;
+    color: black;
+    text-decoration: none;
+    padding: 12px 24px;
+    font-size: 20px;
+    border-radius: 8px;
+    display: block;
+    font-weight: bold;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.button:hover {
+    background-color: lightgreen;
+    color: white;
+}
+
+/* ===== НАВІГАЦІЯ ===== */
+
+nav {
+    border-top: 4px solid #000000;
+    border-bottom: 4px solid #000000;
+    padding: 18px 100px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #06be00;
+}
+
+.nav-link {
+    font-size: 20px;
+    color: #000000;
+    text-decoration: none;
+    display: block;
+}
+
+.nav-link {
+    transition: color 0.4s ease;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 3px;
+    transition: color 0.4s ease, border-color 0.4s ease;
+}
+
+.nav-link:hover {
+    color:rgba(255, 255, 255, 0.822);
+    font-size: 20px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.822);
+}
+
+/* ===== ЗАГОЛОВКИ ===== */
+
+h1 {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 34px;
+    margin-top: 45px;
+    margin-bottom: 40px;
+}
+
+h1::before {
+    content: "◆ ";
+    color: #00cfff;
+}
+
+h1::after {
+    content: " ◆";
+    color: #00cfff;
+}
+
+h2 {
+    position: relative;
+    font-size: 20px;
+    margin-bottom: 10px;
+    transition: color 0.4s ease, left 0.4s ease, font-size 0.3s ease;
+}
+
+/* ===== СІТКА КАРТОК ===== */
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+/* ===== КАРТКА ТОВАРУ ===== */
+
+.post {
+    background-color: #1e1e2e;
+    padding: 20px 30px 28px 30px;
+    width: 380px;
+    margin: 16px;
+    position: relative;
+    border-radius: 6px;
+    border-bottom: 4px solid #333355;
+    color: white;
+    transition: background-color 0.45s ease, border-color 0.45s ease, box-shadow 0.45s ease;
+}
+
+/* Ігровий — червоний акцент */
+.post.gaming {
+    border-bottom: 4px solid #e53e3e;
+}
+
+.post.gaming:hover {
+    background-color: #2d1515;
+    border-bottom: 4px solid #fc8181;
+}
+
+.post.gaming:hover h2 {
+    color: #fc8181;
+    left: 10px;
+    font-size: 22px;
+}
+
+.post.gaming:hover .post-price {
+    color: #fc8181;
+}
+
+.post.gaming:hover .article-but {
+    background-color: #e53e3e;
+    color: white;
+    border: 3px solid #fc8181;
+}
+
+/* Офісний — фіолетовий акцент */
+.post.office {
+    border-bottom: 4px solid #7c3aed;
+}
+
+.post.office:hover {
+    background-color: #1a1330;
+    border-bottom: 4px solid #a78bfa;
+}
+
+.post.office:hover h2 {
+    color: #a78bfa;
+    left: 10px;
+    font-size: 22px;
+}
+
+.post.office:hover .post-price {
+    color: #a78bfa;
+}
+
+.post.office:hover .article-but {
+    background-color: #7c3aed;
+    color: white;
+    border: 3px solid #a78bfa;
+}
+
+/* Навчальний — блакитний акцент */
+.post.study {
+    border-bottom: 4px solid #0ea5e9;
+}
+
+.post.study:hover {
+    background-color: #0d1f2d;
+    border-bottom: 4px solid #38bdf8;
+}
+
+.post.study:hover h2 {
+    color: #38bdf8;
+    left: 10px;
+    font-size: 22px;
+}
+
+.post.study:hover .post-price {
+    color: #38bdf8;
+}
+
+.post.study:hover .article-but {
+    background-color: #0ea5e9;
+    color: white;
+    border: 3px solid #38bdf8;
+}
+
+/* Сторінка «Про нас» — нейтральний акцент */
+.post.about-post {
+    border-bottom: 4px solid #00cfff;
+}
+
+.post.about-post:hover {
+    background-color: #0d1f2d;
+    border-bottom: 4px solid #00cfff;
+}
+
+.post.about-post:hover h2 {
+    color: #00cfff;
+    left: 10px;
+    font-size: 22px;
+}
+
+.post.about-post:hover .article-but {
+    background-color: #0ea5e9;
+    color: white;
+}
+
+/* ===== БЕЙДЖ-ТЕГ ===== */
+
+.tag {
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    width: fit-content;
+}
+
+.tag-gaming {
+    background-color: #3d1515;
+    color: #fc8181;
+}
+
+.tag-office {
+    background-color: #1e1040;
+    color: #a78bfa;
+}
+
+.tag-study {
+    background-color: #0a2030;
+    color: #38bdf8;
+}
+
+/* ===== ЗОБРАЖЕННЯ ТОВАРУ ===== */
+
+.post-img {
+    display: block;
+    margin: 10px auto;
+    border-radius: 4px;
+    object-fit: cover;
+    background-color: #2a2a3a;
+}
+
+.post:hover .post-img {
+    background-color: #333355;
+}
+
+/* ===== ЗНАЧОК HIT ===== */
+
+.img-hit {
+    position: absolute;
+    display: inline-block;
+    right: 15px;
+    top: 55px;
+}
+
+.post:hover .img-hit {
+    border: 4px dotted orangered;
+    border-radius: 50%;
+}
+
+/* ===== ТЕКСТ І ЦІНА ===== */
+
+.post-text {
+    font-size: 16px;
+    color: #aaaacc;
+    position: relative;
+    margin-bottom: 6px;
+    transition: color 0.4s ease, left 0.4s ease;
+}
+
+.post:hover .post-text {
+    left: 10px;
+    color: #ccccee;
+}
+
+.post-price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00cfff;
+    position: relative;
+    margin-bottom: 14px;
+    transition: color 0.4s ease;
+}
+
+/* ===== КНОПКА «ДЕТАЛЬНІШЕ» ===== */
+
+.article-but {
+    text-decoration: none;
+    background-color: #1a3a6a;
+    color: #00cfff;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px 30px;
+    display: block;
+    border-radius: 4px;
+    border: 2px solid #00cfff;
+    transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
+
+.article-but:hover {
+    background-color: #00cfff;
+    color: black;
+}
+
+/* ===== ПОВНА КАРТИНКА ===== */
+
+.full-image {
+    display: block;
+    margin: 60px 0px 60px 0px;
+    object-fit: cover;
+    max-height: 320px;
+    opacity: 0.7;
+}
+
+/* ===== SIDEBAR (ASIDE) ===== */
+
+aside {
+    position: fixed;
+    right: 0;
+    top: 230px;
+    background-color: #1a0a40;
+    border-radius: 10px 0 0 10px;
+    width: 90px;
+    padding: 18px 12px;
+    border: 1px solid #7c3aed;
+    border-right: none;
+}
+
+.social {
+    margin: 0px 0px 16px 10px;
+    display: block;
+    font-size: 28px;
+    text-decoration: none;
+    text-align: center;
+    transition: border-color 0.4s ease;
+}
+
+.social:hover {
+    border-bottom: 3px solid rgba(255, 165, 0, 0.6);
+}
+
+.aside-text {
+    font-size: 14px;
+    color: #ccaaff;
+    text-align: center;
+    margin-bottom: 14px;
+    line-height: 1.4;
+}
+
+.aside-text:hover {
+    color: orange;
+}
+
+/* ===== БЛОК СТАТИСТИКИ (сторінка "Про нас") ===== */
+
+.stats {
+    max-width: 1100px;
+    margin: 0 auto 40px auto;
+}
+
+.stats-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.stat-box {
+    background-color: #1e1e2e;
+    border: 2px solid #00cfff;
+    border-radius: 8px;
+    padding: 30px 40px;
+    width: 220px;
+    text-align: center;
+    color: white;
+    transition: background-color 0.45s ease, border-color 0.45s ease;
+}
+
+.stat-box:hover {
+    background-color: #0d1f35;
+    border-color: orange;
+}
+
+.stat-number {
+    font-size: 36px;
+    font-weight: bold;
+    color: #00cfff;
+    margin-bottom: 8px;
+    transition: color 0.4s ease;
+}
+
+.stat-box:hover .stat-number {
+    color: orange;
+}
+
+.stat-label {
+    font-size: 16px;
+    color: #aaaacc;
+}
+
+/* ===== ФУТЕР ===== */
+
+footer {
+    background-color: #16161f;
+    border-top: 3px solid #00cfff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 50px;
+}
+
+.footer-text {
+    font-size: 18px;
+    color: #aaaacc;
+    margin-right: 30px;
+    line-height: 1.6;
+}
+
+.footer-text span {
+    color: #00cfff;
+    font-weight: bold;
+}
+
+.address::before {
+    content: "🏠 ";
+}
+
+.tel::before {
+    content: "📞 ";
+}
+
+.mail::before {
+    content: "✉️ ";
+}
+
+.footer-logo {
+    text-align: right;
+}
+
+.footer-logo-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00cfff;
+    letter-spacing: 2px;
+}
+
+.footer-slogan {
+    font-size: 14px;
+    color: #555577;
+    margin-top: 4px;
+}
